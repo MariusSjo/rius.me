@@ -24,30 +24,54 @@ export class enhet extends Component {
                     });
                 });
             console.log(this.state.liste);
+            localStorage.setItem(0, this.state.liste);
         } catch {
             console.log("not connected");
         }
     }
 
+    sortBeer() {}
+
     render() {
         return (
             <div>
+                <h1>Polet kommer her</h1>
+                <div className="enhet">
+                    <div id="namecolumn">Name</div>
+                    <div id="pricecolumn">Price</div>
+                    <div id="alco">Alco</div>
+                    <div id="picturecolumn">Picture</div>
+                </div>
                 {this.state.liste.map(drinks => {
-                    return (
-                        <li key={drinks.basic.productId}>
-                            Navn: {drinks.basic.productLongName}, Volum:
-                            {drinks.basic.volume}
-                            ,Pris: {drinks.prices[0].salesPrice},
-                            <img
-                                alt={drinks.basic.productLongName}
-                                src={
-                                    "https://bilder.vinmonopolet.no/cache/100x100-0/" +
-                                    drinks.basic.productId +
-                                    "-1.jpg"
-                                }
-                            />
-                        </li>
-                    );
+                    console.log(drinks.basic.alcoholicContent);
+                    if (drinks.basic.alcoholContent > 0) {
+                        return (
+                            <div
+                                className="enheter"
+                                key={drinks.basic.productId}
+                            >
+                                {/*   <div>Bache-Gabrielsen 3 kors</div>
+                            <div>0,7</div>
+                            <div>40%</div> */}
+
+                                {drinks.basic.productLongName}
+                                <div>{drinks.basic.volume}</div>
+                                <div>{drinks.basic.alcoholContent}%</div>
+                                <div>{drinks.prices[0].salesPrice}</div>
+                                <img
+                                    className="picture"
+                                    alt={drinks.basic.productLongName}
+                                    src={
+                                        "https://bilder.vinmonopolet.no/cache/100x100-0/" +
+                                        drinks.basic.productId +
+                                        "-1.jpg"
+                                    }
+                                />
+                            </div>
+                        );
+                    } else {
+                        console.log("bullshit");
+                    }
                 })}
             </div>
         );
