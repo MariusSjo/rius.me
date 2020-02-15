@@ -10,9 +10,12 @@ export class vinmonopolet extends Component {
         return (
             <div>
                 <h1>Polet kommer her</h1>
-                <h2>
+                <div className="enhet">
+                    <div id="namecolumn">Name</div>
+                    <div id="pricecolumn">Price</div>
+                    <div id="picturecolumn">Picture</div>
                     <Enhet />
-                </h2>
+                </div>
             </div>
         );
     }

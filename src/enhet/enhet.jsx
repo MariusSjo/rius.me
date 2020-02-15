@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./enhet.css";
 
 export class enhet extends Component {
     constructor() {
@@ -9,19 +10,23 @@ export class enhet extends Component {
     }
 
     componentDidMount() {
-        fetch(
-            "https://apis.vinmonopolet.no/products/v0/details-normal?maxResults=500&key=6a5497e32c02464c854e54ec27996ab1"
-        )
-            .then(results => {
-                return results.json();
-            })
-            .then(data => {
-                console.log(data);
-                this.setState({
-                    liste: data
+        try {
+            fetch(
+                "https://apis.vinmonopolet.no/products/v0/details-normal?maxResults=500&key=6a5497e32c02464c854e54ec27996ab1"
+            )
+                .then(results => {
+                    return results.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        liste: data
+                    });
                 });
-            });
-        console.log(this.state.liste);
+            console.log(this.state.liste);
+        } catch {
+            console.log("not connected");
+        }
     }
 
     render() {

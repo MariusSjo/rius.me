@@ -7,7 +7,6 @@ export default class header extends Component {
     render() {
         return (
             <div id="header">
-                <div id="menubar">some menu elements</div>
                 <div id="logoposition">
                     <img id="dot" src={logo} alt="logo" />
                     <img id="riusLogo" src={riusLogo} alt="riusLogo" />

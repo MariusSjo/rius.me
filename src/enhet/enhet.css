@@ -1,0 +1,18 @@
+.enhet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid gray;
+}
+
+.enhet>li {
+  font-size: 20px;
+  text-align: center;
+  line-height: 90px;
+}
+
+
+#picturecolumn {}
+
+#namecolumn {}
+
+#pricecolumn {}
