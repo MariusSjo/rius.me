@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import "./enhet.css";
 
 export class enhet extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             liste: []
         };
+        console.log(this.searchText);
     }
 
     componentDidMount() {
+        console.log(this.props.test);
         try {
             fetch(
                 "https://apis.vinmonopolet.no/products/v0/details-normal?maxResults=500&key=6a5497e32c02464c854e54ec27996ab1"
@@ -24,7 +26,7 @@ export class enhet extends Component {
                     });
                 });
             console.log(this.state.liste);
-            localStorage.setItem(0, this.state.liste);
+            localStorage.setItem("0", this.state.liste);
         } catch {
             console.log("not connected");
         }
@@ -35,6 +37,7 @@ export class enhet extends Component {
     render() {
         return (
             <div>
+                <h1>{this.props.searchText}</h1>
                 <h1>Polet kommer her</h1>
                 <div className="enhet">
                     <div id="namecolumn">Name</div>
@@ -43,7 +46,6 @@ export class enhet extends Component {
                     <div id="picturecolumn">Picture</div>
                 </div>
                 {this.state.liste.map(drinks => {
-                    console.log(drinks.basic.alcoholicContent);
                     if (drinks.basic.alcoholContent > 0) {
                         return (
                             <div
@@ -52,7 +54,8 @@ export class enhet extends Component {
                             >
                                 {/*   <div>Bache-Gabrielsen 3 kors</div>
                             <div>0,7</div>
-                            <div>40%</div> */}
+                            <div>40%</div> 
+                            <img className="picture" alt="drikke" src="../graphics/5401-1.jpg*/}
 
                                 {drinks.basic.productLongName}
                                 <div>{drinks.basic.volume}</div>
@@ -69,8 +72,6 @@ export class enhet extends Component {
                                 />
                             </div>
                         );
-                    } else {
-                        console.log("bullshit");
                     }
                 })}
             </div>

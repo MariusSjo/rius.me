@@ -1,6 +1,5 @@
 #logoposition {
-  visibility: inherit;
-  height: 80vh;
+  height: 20vh;
 }
 
 #menubar {
@@ -20,14 +19,6 @@
   position: absolute;
 }
 
-p {
-  position: absolute;
-  margin-top: 27%;
-  margin-left: 23%;
-  text-align: center;
-  font-size: 80%;
-  width: 20%
-}
 
 @media (prefers-reduced-motion: no-preference) {
   #dot {
