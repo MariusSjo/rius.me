@@ -11,6 +11,10 @@
   mix-blend-mode: normal;
 }
 
+.animation-area {
+  width: 100%;
+}
+
 @media screen and (max-width: 850px) {
   #logoposition {
     height: 50vh;

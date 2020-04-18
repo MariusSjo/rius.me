@@ -22,7 +22,7 @@ function App() {
                                 Home
                             </NavLink>
                         </li>
-                        <li>|</li>
+                        <li id="divider"> | </li>
                         <li>
                             <NavLink
                                 activeClassName="active"

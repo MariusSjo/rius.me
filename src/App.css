@@ -29,6 +29,11 @@ div>ul {
   margin: 10 10;
 }
 
+#divider {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 
 a {
   text-decoration: none;
@@ -50,6 +55,10 @@ a {
 
 @media screen and (max-width: 850px) {
   a {
+    font-size: 4vw;
+  }
+
+  .navbar {
     font-size: 4vw;
   }
 }
