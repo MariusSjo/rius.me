@@ -1,42 +1,51 @@
-import React from "react";
-import "./App.css";
-import About from "./about/about.jsx";
-import Header from "./header/header.jsx";
-import Content from "./content/content.jsx";
-import Home from "./home/home.jsx";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import './App.css';
+import About from './about/about.jsx';
+import Header from './header/header.jsx';
+import Content from './content/content.jsx';
+import Home from './home/home.jsx';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    NavLink,
+} from 'react-router-dom';
+
 function App() {
     return (
         <div>
             <Router>
-                <ul id="menu">
+                <ul class="navbar">
+                    <div>
+                        <li>
+                            <NavLink activeClassName="active" to="/ ">
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <NavLink
+                                activeClassName="active"
+                                to="/projects"
+                                id="projects"
+                            >
+                                Projects
+                            </NavLink>
+                        </li>
+                    </div>
                     <li>
-                        <Link to="/">
-                            <Button variant="info">Home</Button>{" "}
-                        </Link>
-                    </li>
-                    <li>
-                        {" "}
-                        <Link to="/pol">
-                            <Button variant="info">Polet</Button>{" "}
-                        </Link>
-                    </li>
-                    <li>
-                        {" "}
-                        <Link to="/about">
-                            <Button variant="info">About</Button>{" "}
-                        </Link>
+                        <NavLink activeClassName="active" to="/contact">
+                            Contact
+                        </NavLink>
                     </li>
                 </ul>
                 <Switch>
-                    <Route path="/pol">
-                        <div id="test">
+                    <Route path="/projects">
+                        <div>
                             <Content />
                         </div>
                     </Route>
-                    <Route path="/about">
+                    <Route path="/contact">
                         <Header />
                         <About />
                     </Route>

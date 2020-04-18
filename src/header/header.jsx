@@ -1,14 +1,19 @@
-import React, { Component } from "react";
-import logo from "../logo.svg";
-import riusLogo from "../graphics/logo.png";
-import "./header.css";
+import React, { Component } from 'react';
+import riusLogo from '../graphics/logo2.0.png';
+import './header.css';
 
 export default class header extends Component {
     render() {
         return (
-            <div id="header">
+            <div>
                 <div id="logoposition">
-                    <img id="dot" src={logo} alt="logo" />
+                    {/*     <video with="100">
+                        <source
+                            src="../graphics/Network.webm"
+                            type="video/webm"
+                        />
+                        dette funket ikke
+                    </video> */}
                     <img id="riusLogo" src={riusLogo} alt="riusLogo" />
                 </div>
             </div>

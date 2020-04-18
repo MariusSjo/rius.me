@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import "./home.css";
+import React, { Component } from 'react';
+import './home.css';
 
 export class home extends Component {
     render() {
         return (
-            <div>
+            <div id="home">
                 <h2>Welcome</h2>
                 <p>
                     Hi, and welcome to rius.me. You can say that this site
