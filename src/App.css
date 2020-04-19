@@ -4,14 +4,20 @@ body {
 
 .navbar {
   display: flex;
-  margin: 2vh 10vw 0vh 10vw;
-  height: 8vh;
-  width: 80vw;
+  height: 10vh;
   justify-content: space-between;
-  font-size: 2vw;
   line-height: 18px;
-  color: #456F5F;
+  z-index: 20;
   list-style-type: none;
+  position: sticky;
+  background-image: linear-gradient(#E1E1E1, #E1E1E1, transparent);
+  top: 0;
+}
+
+.navbar>* {
+  margin: 2vh 5vw 0vh 5vw;
+  font-size: 4vw;
+  color: #456F5F;
 }
 
 ul {
@@ -39,14 +45,12 @@ a {
   text-decoration: none;
   color: #456F5F;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 2vw;
+  font-size: 3vw;
   line-height: 18px;
-  /* identical to box height 
-  border-radius: 94px;
-  background: #E1E1E1;
-  box-shadow: 29px 29px 64px #bfbfbf,
-    -29px -29px 64px #ffffff;
-    */
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .active {
@@ -57,6 +61,7 @@ a {
   a {
     font-size: 4vw;
   }
+
 
   .navbar {
     font-size: 4vw;
