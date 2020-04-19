@@ -41,13 +41,14 @@ function App() {
                 </ul>
                 <Switch>
                     <Route path="/projects">
-                        <div>
+                        <Header />
+                        {/*                         <div>
                             <Content />
-                        </div>
+                        </div> */}
                     </Route>
                     <Route path="/contact">
                         <Header />
-                        <About />
+                        {/*                         <About /> */}
                     </Route>
                     <Route path="/">
                         <Header />
