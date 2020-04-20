@@ -115,8 +115,6 @@
   .box-area li {
     animation: animate-small 20s linear infinite;
   }
-
-
 }
 
 @keyframes animate {
