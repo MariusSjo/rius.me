@@ -10,7 +10,7 @@ body {
   z-index: 20;
   list-style-type: none;
   position: sticky;
-  background-image: linear-gradient(#E1E1E1, #E1E1E1, transparent);
+  background-image: linear-gradient(#E1E1E1, #E1E1E1, rgba(255, 255, 255, 0));
   top: 0;
 }
 
