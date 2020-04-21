@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './home.css';
-import portrett from '../graphics/portrett.png';
+import portrett from '../graphics/portrett.jpg';
 import sporty from '../graphics/sporty.jpeg';
-import paaTur from '../graphics/paaTur.jpeg';
+import paaTur from '../graphics/paaTur.jpg';
 
 export class home extends Component {
     render() {

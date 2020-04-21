@@ -32,8 +32,9 @@ h2 {
 }
 
 #section>img {
-  width: 25%;
-  margin-top: 6%;
+  height: 35%;
+  margin-top: 10%;
+  border-radius: 5%;
 }
 
 #section>p {
@@ -45,24 +46,22 @@ h2 {
 #portrett {
   border: 1px solid rgba(240, 128, 60, 0.4);
   border-radius: 40%;
-  width: 25%;
   animation: pulse-orange 3s infinite;
 }
 
 #sporty {
-  border: 1px solid rgba(240, 128, 60, 0.4);
-  width: 25%;
-  animation: pulse-orange 3s infinite;
+  border: 1px solid rgba(69, 111, 95, 0.8);
+  animation: pulse-green 3s infinite;
 }
 
 #paaTur {
   border: 1px solid rgba(240, 128, 60, 0.4);
-  width: 25%;
   animation: pulse-orange 3s infinite;
 }
 
 #portrett:hover,
-section:hover {
+#paaTur:hover,
+#sporty:hover {
   animation: pulse-orange-big 3s infinite;
   border: 1px solid rgba(69, 111, 95, 0.4);
   color: #456F5F;
@@ -102,8 +101,25 @@ section:hover {
   }
 }
 
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
+  }
 
-@media screen and (max-width: 850px) {
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(69, 111, 95, 0.8);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
+  }
+}
+
+
+@media screen and (max-width: 750px) {
   #section {
     height: 45vh;
     font-size: 1em;
@@ -111,5 +127,10 @@ section:hover {
 
   #section:last-child {
     height: 55vh;
+  }
+
+  #section>img {
+    height: 40%;
+    margin-top: 6%;
   }
 }
