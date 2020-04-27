@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './home.css';
-import portrett from '../graphics/portrett.jpg';
+import portrett from '../graphics/portrett.jpeg';
 import sporty from '../graphics/sporty.jpeg';
 import paaTur from '../graphics/paaTur.jpg';
 
@@ -13,7 +13,7 @@ export class home extends Component {
                     <h2>Hei!</h2>
                     <p>
                         Jeg er Marius Sjøberg, en student som studerer
-                        informatikk ved NTNU i Trondeim. Og som du kanskje har
+                        informatikk ved NTNU i Trondheim. Og som du kanskje har
                         skjønt; en stolt eier av rius.me domenet.
                     </p>
                 </div>

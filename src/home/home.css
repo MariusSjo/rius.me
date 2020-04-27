@@ -15,20 +15,20 @@ h2 {
 
 #section:nth-child(2) {
   background-color: rgba(255, 121, 63, 0.8);
-  color: #456F5F;
+  color: #456f5f;
 }
-
-
 
 #section {
   position: relative;
   text-align: center;
-  color: #F0803C;
+  color: #f0803c;
   background-color: rgba(69, 111, 95, 0.8);
   box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100vh;
   font-size: 2vw;
+  min-width: 300px;
+  min-height: 450px;
 }
 
 #section>img {
@@ -39,8 +39,8 @@ h2 {
 
 #section>p {
   text-align: center;
-  margin-left: 20%;
-  width: 60%;
+  margin-left: 10%;
+  width: 80%;
 }
 
 #portrett {
@@ -64,7 +64,7 @@ h2 {
 #sporty:hover {
   animation: pulse-orange-big 3s infinite;
   border: 1px solid rgba(69, 111, 95, 0.4);
-  color: #456F5F;
+  color: #456f5f;
 }
 
 @keyframes pulse-orange {
@@ -119,7 +119,26 @@ h2 {
 }
 
 
-@media screen and (max-width: 750px) {
+@media (min-width: 400px) {
+  #section>p {
+    font-size: 8px;
+  }
+
+  #section:last-child {
+    height: 55vh;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #section>img {
+    height: 40%;
+    margin-top: 6%;
+  }
+}
+
+@media screen and (min-width: 750px) {
   #section {
     height: 45vh;
     font-size: 1em;

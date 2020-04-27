@@ -1,31 +1,16 @@
 import React, { Component } from 'react';
 import riusLogo from '../graphics/logo2.0.png';
 import './header.css';
+import Bubbles from '../graphics/animation/bubbles.jsx';
 
 export default class header extends Component {
     render() {
         return (
             <div>
                 <div id="logoposition">
-                    {/*     <video with="100">
-                        <source
-                            src="../graphics/Network.webm"
-                            type="video/webm"
-                        />
-                        dette funket ikke
-                    </video> */}
                     <img id="riusLogo" src={riusLogo} alt="riusLogo" />
                 </div>
-                <div class="animation-area">
-                    <ul class="box-area">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+                <Bubbles />
             </div>
         );
     }

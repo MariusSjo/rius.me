@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import About from './about/about.jsx';
 import Header from './header/header.jsx';
-import Content from './content/content.jsx';
 import Home from './home/home.jsx';
 import {
     BrowserRouter as Router,
@@ -19,7 +18,7 @@ function App() {
                     <div>
                         <li>
                             <NavLink activeClassName="active" to="/ ">
-                                Home
+                                Hjem
                             </NavLink>
                         </li>
                         <li id="divider"> | </li>
@@ -29,13 +28,13 @@ function App() {
                                 to="/projects"
                                 id="projects"
                             >
-                                Projects
+                                Prosjekter
                             </NavLink>
                         </li>
                     </div>
                     <li>
                         <NavLink activeClassName="active" to="/contact">
-                            Contact
+                            Kontakt
                         </NavLink>
                     </li>
                 </ul>
@@ -45,10 +44,10 @@ function App() {
                         {/*                         <div>
                             <Content />
                         </div> */}
+                        <h2>Kommer snart!</h2>
                     </Route>
                     <Route path="/contact">
-                        <Header />
-                        {/*                         <About /> */}
+                        <About />
                     </Route>
                     <Route path="/">
                         <Header />
