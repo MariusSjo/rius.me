@@ -102,11 +102,17 @@
 @media only screen and (max-width: 992px) {
   .box-area {
     height: 50vh;
-    min-height: 420px;
   }
 
   .box-area li {
     animation: animate-small 20s linear infinite;
+  }
+}
+
+@media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
+  .box-area {
+    min-height: 450px;
+
   }
 }
 
