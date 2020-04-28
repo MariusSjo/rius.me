@@ -16,5 +16,17 @@
   #logoposition {
     height: 45vh;
     min-width: 450px;
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width:640px),
+screen and (-webkit-device-pixel-ratio: 3) {
+  #riusLogo {
+    width: 60%;
+    min-width: 200px;
+    left: 20%;
+    position: absolute;
+    mix-blend-mode: normal;
   }
 }
