@@ -9,8 +9,8 @@ export default class header extends Component {
             <div>
                 <div id="logoposition">
                     <img id="riusLogo" src={riusLogo} alt="riusLogo" />
+                    <Bubbles />
                 </div>
-                <Bubbles />
             </div>
         );
     }

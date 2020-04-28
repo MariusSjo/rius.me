@@ -1,224 +1,245 @@
 h2 {
-    padding: 0;
-    margin: 0;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #home {
-    -moz-box-shadow: inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
-    padding: 0;
-    background-color: white;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  padding: 0;
+  background-color: white;
 }
 
 #section:nth-child(2) {
-    background-color: rgba(255, 121, 63, 0.8);
-    color: #456f5f;
+  background-color: rgba(255, 121, 63, 0.8);
+  color: #456f5f;
 }
-#section:first-child > p {
-    margin-top: 5px;
+
+#section:first-child>p {
+  margin-top: 5px;
 }
+
 
 #section {
-    position: relative;
-    text-align: center;
-    color: #f0803c;
-    background-color: rgba(69, 111, 95, 0.8);
-    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100vh;
-    font-size: 1em;
-    min-width: 300px;
-    min-height: 450px;
+  position: relative;
+  text-align: center;
+  color: #f0803c;
+  background-color: rgba(69, 111, 95, 0.8);
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 45vh;
+  font-size: 1em;
+  min-width: 300px;
+
 }
 
-#section > img {
-    height: 35%;
-    margin-top: 10%;
-    border-radius: 5%;
+#section>img {
+  height: 30%;
+  margin-top: 5%;
+  border-radius: 5%;
 }
 
-#section > p {
-    text-align: center;
-    margin-left: 10%;
-    width: 80%;
+#section>p {
+  text-align: center;
+  margin-left: 10%;
+  font-size: 1.6em;
+  width: 80%;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 #portrett {
-    border: 1px solid rgba(240, 128, 60, 0.4);
-    border-radius: 40%;
-    animation: pulse-orange 3s infinite;
+  border: 1px solid rgba(240, 128, 60, 0.4);
+  border-radius: 40%;
+  animation: pulse-orange 3s infinite;
 }
 
 #sporty {
-    border: 1px solid rgba(69, 111, 95, 0.8);
-    animation: pulse-green 3s infinite;
+  border: 1px solid rgba(69, 111, 95, 0.8);
+  animation: pulse-green 3s infinite;
 }
 
 #paaTur {
-    border: 1px solid rgba(240, 128, 60, 0.4);
-    animation: pulse-orange 3s infinite;
+  border: 1px solid rgba(240, 128, 60, 0.4);
+  animation: pulse-orange 3s infinite;
 }
 
 #portrett:hover,
 #paaTur:hover,
 #sporty:hover {
-    animation: pulse-orange-big 3s infinite;
-    border: 1px solid rgba(69, 111, 95, 0.4);
-    color: #456f5f;
+  animation: pulse-orange-big 3s infinite;
+  border: 1px solid rgba(69, 111, 95, 0.4);
+  color: #456f5f;
 }
 
-/* 
-@media screen and (min-width: 500px) {
-  #section>p {
-    font-size: 2px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #section {
+    font-size: 0.8em;
+    height: 50vh;
   }
 
-  #section:last-child {
-    height: 55vh;
+  #section>img {
+    width: 50vw;
+    height: auto;
+    margin-top: 6%;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 
-  #section>img {
-    height: 40%;
-    margin-top: 6%;
+  #section>p {
+    text-align: center;
+    margin-left: 20%;
+    width: 60%;
   }
-}
 
-@media screen and (min-width: 500px) and (max-width: 750px) {
-  #section {
+
+  .box-area {
     height: 45vh;
-    font-size: 2em;
+    ;
   }
 
-  #section:last-child {
-    height: 55vh;
+  #logoposition {
+    height: 40vh;
   }
-
-  #section>img {
-    height: 40%;
-    margin-top: 6%;
-  }
-}
- */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    #section {
-        font-size: 20px;
-        height: 45vh;
-    }
-    #section > img {
-        width: 50vw;
-        height: auto;
-        margin-top: 6%;
-    }
-    h2 {
-        font-size: 25px;
-    }
-    #section > p {
-        text-align: center;
-        margin-left: 20%;
-        width: 60%;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    #section {
-        font-size: 20px;
-        height: 45vh;
-    }
-    #section > img {
-        margin-top: 6%;
-    }
-    h2 {
-        font-size: 25px;
-    }
-    #section > p {
-        text-align: center;
-        margin-left: 20%;
-        width: 60%;
-    }
-}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    #section {
-        position: relative;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        font-size: 1em;
-        min-width: 300px;
-        min-height: 450px;
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.2em;
-        margin-top: 20px;
-    }
+  #section {
+    position: relative;
+    text-align: center;
+    height: 45vh;
+    min-width: 300px;
+
+  }
+
+  #section>img {
+    width: 30%;
+    height: auto;
+    margin-top: 3%;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+
+  #section>p {
+    font-size: 1.3em;
+  }
+
+  #logoposition {
+    height: 45vh;
+    min-width: 450px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #section {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    min-width: 300px;
+    font-size: 1.4em;
+
+  }
+
+  #section>img {
+    width: 40%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  #logoposition {
+    height: 90vh;
+    min-width: 450px;
+  }
+
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/*iphone X */
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+  #section>img {
+    height: 40%;
+    width: auto;
+  }
+
+  #section>p {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 2.4em;
+  }
 }
 
 @keyframes pulse-orange {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
-    }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+  }
 
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
-    }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+  }
 
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
-    }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+  }
 }
 
 @keyframes pulse-orange-big {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
-    }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+  }
 
-    70% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 15px rgba(255, 121, 63, 0);
-    }
+  70% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 15px rgba(255, 121, 63, 0);
+  }
 
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
-    }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+  }
 }
 
 @keyframes pulse-green {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
-    }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
+  }
 
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(69, 111, 95, 0.8);
-    }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(69, 111, 95, 0.8);
+  }
 
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
-    }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(69, 111, 95, 0.8);
+  }
 }

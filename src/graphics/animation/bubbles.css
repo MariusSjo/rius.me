@@ -1,7 +1,3 @@
-#logoposition {
-  height: 90vh;
-}
-
 #riusLogo {
   width: 50%;
   left: 25%;
@@ -103,11 +99,7 @@
   animation-duration: 15s;
 }
 
-@media screen and (max-width: 850px) {
-  #logoposition {
-    height: 45vh;
-  }
-
+@media only screen and (max-width: 992px) {
   .box-area {
     height: 50vh;
   }

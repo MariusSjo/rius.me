@@ -44,7 +44,7 @@ div>ul {
 a {
   text-decoration: none;
   color: #456F5F;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
   font-size: 3vw;
   line-height: 18px;
 }

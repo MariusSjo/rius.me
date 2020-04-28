@@ -11,7 +11,8 @@
 }
 
 
-@media screen and (min-width: 850px) {
+
+@media only screen and (max-width: 980px) {
   #logoposition {
     height: 45vh;
     min-width: 450px;
