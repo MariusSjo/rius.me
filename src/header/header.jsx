@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import riusLogo from '../graphics/logo2.0.png';
+import riusLogo from '../graphics/nyfont.png';
 import './header.css';
 import Bubbles from '../graphics/animation/bubbles.jsx';
 

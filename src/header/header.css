@@ -5,6 +5,7 @@
 #riusLogo {
   width: 50%;
   min-width: 200px;
+  top: 10%;
   left: 25%;
   position: absolute;
   mix-blend-mode: normal;
@@ -21,7 +22,7 @@
 
 @media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
   #riusLogo {
-    width: 60%;
+    width: 80%;
     min-width: 200px;
     left: 20%;
     position: absolute;
@@ -29,8 +30,14 @@
   }
 
   #logoposition {
-    height: 45vh;
+    height: 50vh;
     min-width: 450px;
     min-height: 450px;
+  }
+
+  #riusLogo {
+    width: 70%;
+    top: 20%;
+    left: 150%;
   }
 }
