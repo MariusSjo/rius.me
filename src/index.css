@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Montserrat';
-  src: local('Montserrat'), ur ('./fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  src: local('Montserrat'), url("./fonts/Montserrat/Montserrat-Medium.ttf") format('truetype');
 }
 
 

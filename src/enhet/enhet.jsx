@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import "./enhet.css";
+import React, { Component } from 'react';
+import './enhet.css';
 
 export class enhet extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            liste: []
+            liste: [],
         };
         console.log(this.searchText);
     }
@@ -14,21 +14,21 @@ export class enhet extends Component {
         console.log(this.props.test);
         try {
             fetch(
-                "https://apis.vinmonopolet.no/products/v0/details-normal?maxResults=500&key=6a5497e32c02464c854e54ec27996ab1"
+                'https://apis.vinmonopolet.no/products/v0/details-normal?maxResults=500&key=6a5497e32c02464c854e54ec27996ab1'
             )
-                .then(results => {
+                .then((results) => {
                     return results.json();
                 })
-                .then(data => {
+                .then((data) => {
                     console.log(data);
                     this.setState({
-                        liste: data
+                        liste: data,
                     });
                 });
             console.log(this.state.liste);
-            localStorage.setItem("0", this.state.liste);
+            localStorage.setItem('0', this.state.liste);
         } catch {
-            console.log("not connected");
+            console.log('not connected');
         }
     }
 
@@ -45,7 +45,7 @@ export class enhet extends Component {
                     <div id="alco">Alco</div>
                     <div id="picturecolumn">Picture</div>
                 </div>
-                {this.state.liste.map(drinks => {
+                {this.state.liste.map((drinks) => {
                     if (drinks.basic.alcoholContent > 0) {
                         return (
                             <div
@@ -65,9 +65,9 @@ export class enhet extends Component {
                                     className="picture"
                                     alt={drinks.basic.productLongName}
                                     src={
-                                        "https://bilder.vinmonopolet.no/cache/100x100-0/" +
+                                        'https://bilder.vinmonopolet.no/cache/100x100-0/' +
                                         drinks.basic.productId +
-                                        "-1.jpg"
+                                        '-1.jpg'
                                     }
                                 />
                             </div>

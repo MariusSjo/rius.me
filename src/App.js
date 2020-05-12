@@ -3,6 +3,7 @@ import './App.css';
 import About from './about/about.jsx';
 import Header from './header/header.jsx';
 import Home from './home/home.jsx';
+import Projects from './projects/projects.jsx';
 import {
     BrowserRouter as Router,
     Switch,
@@ -40,11 +41,7 @@ function App() {
                 </ul>
                 <Switch>
                     <Route path="/projects">
-                        <Header />
-                        {/*                         <div>
-                            <Content />
-                        </div> */}
-                        <h2>Kommer snart!</h2>
+                        <Projects />
                     </Route>
                     <Route path="/contact">
                         <About />

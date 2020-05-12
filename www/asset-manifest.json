@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6dd5efb.chunk.css",
-    "main.js": "/static/js/main.bc37ccee.chunk.js",
-    "main.js.map": "/static/js/main.bc37ccee.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5872e535.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5872e535.js.map",
-    "static/js/2.ef267dee.chunk.js": "/static/js/2.ef267dee.chunk.js",
-    "static/js/2.ef267dee.chunk.js.map": "/static/js/2.ef267dee.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.645d4d6fd20659f49fec162ab2806a6e.js": "/precache-manifest.645d4d6fd20659f49fec162ab2806a6e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c6dd5efb.chunk.css.map": "/static/css/main.c6dd5efb.chunk.css.map",
-    "static/js/2.ef267dee.chunk.js.LICENSE.txt": "/static/js/2.ef267dee.chunk.js.LICENSE.txt",
-    "static/media/logo2.0.png": "/static/media/logo2.0.1457ad70.png",
-    "static/media/paaTur.jpg": "/static/media/paaTur.bb77f787.jpg",
-    "static/media/portrett.jpeg": "/static/media/portrett.944eaf9b.jpeg",
-    "static/media/sporty.jpeg": "/static/media/sporty.d5f3f9ce.jpeg",
-    "static/media/visittkort.jpg": "/static/media/visittkort.41644740.jpg"
+    "main.css": "./static/css/main.74ad8b13.chunk.css",
+    "main.js": "./static/js/main.e039409e.chunk.js",
+    "main.js.map": "./static/js/main.e039409e.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.30417107.js",
+    "runtime-main.js.map": "./static/js/runtime-main.30417107.js.map",
+    "static/js/2.ef267dee.chunk.js": "./static/js/2.ef267dee.chunk.js",
+    "static/js/2.ef267dee.chunk.js.map": "./static/js/2.ef267dee.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.6d9469a691c09bb962e45e2ae7ec9eab.js": "./precache-manifest.6d9469a691c09bb962e45e2ae7ec9eab.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.74ad8b13.chunk.css.map": "./static/css/main.74ad8b13.chunk.css.map",
+    "static/js/2.ef267dee.chunk.js.LICENSE.txt": "./static/js/2.ef267dee.chunk.js.LICENSE.txt",
+    "static/media/Montserrat-Medium.ttf": "./static/media/Montserrat-Medium.c8b6e083.ttf",
+    "static/media/nyfont.png": "./static/media/nyfont.f8bae06f.png",
+    "static/media/paaTur.jpg": "./static/media/paaTur.bb77f787.jpg",
+    "static/media/portrett.jpeg": "./static/media/portrett.944eaf9b.jpeg",
+    "static/media/sporty.jpeg": "./static/media/sporty.d5f3f9ce.jpeg",
+    "static/media/visittkort.jpg": "./static/media/visittkort.75eb4249.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5872e535.js",
+    "static/js/runtime-main.30417107.js",
     "static/js/2.ef267dee.chunk.js",
-    "static/css/main.c6dd5efb.chunk.css",
-    "static/js/main.bc37ccee.chunk.js"
+    "static/css/main.74ad8b13.chunk.css",
+    "static/js/main.e039409e.chunk.js"
   ]
 }
