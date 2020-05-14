@@ -1,9 +1,14 @@
+#projects {
+  margin-top: 5vh;
+}
+
 #projects>div {
-  height: 30vh;
-  margin-left: 20%;
-  width: 30%;
+  position: relative;
+  margin-left: 40%;
   margin-bottom: 15vh;
-  padding-left: 30%;
+  width: 36%;
+  min-width: 200px;
+  min-height: 35vh;
 }
 
 .projectImg {
@@ -14,22 +19,64 @@
 
 #image {
   margin-top: 1vh;
-  position: absolute;
-  left: 20%;
-  right: auto;
+  margin-left: 10%;
   padding: 20px;
-  background-color: #F0803C;
+  background-color: #f0803c;
   border-radius: 10%;
-
+  position: absolute;
 }
 
-div>div:nth-child(2n)>#image {
-  right: 20%;
+#projects>div:nth-child(n)>#image {
   left: auto;
+  right: 110%;
+}
+
+#projects>div:nth-child(2n)>#image {
+  left: 110%;
+  right: auto;
 }
 
 #projects>div:nth-child(2n) {
-  padding-left: 0;
-  margin-right: 80%;
+  margin-left: 22%;
+  left: auto;
+}
+
+
+@media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
+  #projects>div {
+    position: relative;
+    width: 60%;
+    min-width: 200px;
+    margin-left: 20%;
+    font-size: 40px;
+    min-height: 5vh;
+  }
+
+  .projectImg {
+    height: 250px;
+    width: 250px;
+    position: relative;
+
+  }
+
+  #image {
+    margin-top: 1vh;
+    margin-left: 45%;
+    padding: 20px;
+    background-color: #f0803c;
+    border-radius: 10%;
+    position: absolute;
+  }
+
+  #projects>div:nth-child(2n)>#image {
+    top: -30%;
+    right: auto;
+    left: auto;
+  }
+
+  #projects>div:nth-child(2n) {
+    margin-left: 20%;
+  }
+
 
 }
