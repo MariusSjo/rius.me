@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "./static/css/main.74ad8b13.chunk.css",
-    "main.js": "./static/js/main.e039409e.chunk.js",
-    "main.js.map": "./static/js/main.e039409e.chunk.js.map",
+    "main.css": "./static/css/main.62945584.chunk.css",
+    "main.js": "./static/js/main.49ca6042.chunk.js",
+    "main.js.map": "./static/js/main.49ca6042.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.30417107.js",
     "runtime-main.js.map": "./static/js/runtime-main.30417107.js.map",
-    "static/js/2.ef267dee.chunk.js": "./static/js/2.ef267dee.chunk.js",
-    "static/js/2.ef267dee.chunk.js.map": "./static/js/2.ef267dee.chunk.js.map",
+    "static/js/2.9ad8a38b.chunk.js": "./static/js/2.9ad8a38b.chunk.js",
+    "static/js/2.9ad8a38b.chunk.js.map": "./static/js/2.9ad8a38b.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.6d9469a691c09bb962e45e2ae7ec9eab.js": "./precache-manifest.6d9469a691c09bb962e45e2ae7ec9eab.js",
+    "precache-manifest.7cbc77f474eaf205aed3bf191c9113fd.js": "./precache-manifest.7cbc77f474eaf205aed3bf191c9113fd.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.74ad8b13.chunk.css.map": "./static/css/main.74ad8b13.chunk.css.map",
-    "static/js/2.ef267dee.chunk.js.LICENSE.txt": "./static/js/2.ef267dee.chunk.js.LICENSE.txt",
+    "static/css/main.62945584.chunk.css.map": "./static/css/main.62945584.chunk.css.map",
+    "static/js/2.9ad8a38b.chunk.js.LICENSE.txt": "./static/js/2.9ad8a38b.chunk.js.LICENSE.txt",
     "static/media/Montserrat-Medium.ttf": "./static/media/Montserrat-Medium.c8b6e083.ttf",
     "static/media/nyfont.png": "./static/media/nyfont.f8bae06f.png",
     "static/media/paaTur.jpg": "./static/media/paaTur.bb77f787.jpg",
+    "static/media/photoshop.png": "./static/media/photoshop.e7b058fd.png",
+    "static/media/polet.png": "./static/media/polet.bf689741.png",
     "static/media/portrett.jpeg": "./static/media/portrett.944eaf9b.jpeg",
     "static/media/sporty.jpeg": "./static/media/sporty.d5f3f9ce.jpeg",
+    "static/media/vindu.png": "./static/media/vindu.638456d5.png",
     "static/media/visittkort.jpg": "./static/media/visittkort.75eb4249.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.30417107.js",
-    "static/js/2.ef267dee.chunk.js",
-    "static/css/main.74ad8b13.chunk.css",
-    "static/js/main.e039409e.chunk.js"
+    "static/js/2.9ad8a38b.chunk.js",
+    "static/css/main.62945584.chunk.css",
+    "static/js/main.49ca6042.chunk.js"
   ]
 }

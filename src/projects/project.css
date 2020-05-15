@@ -19,11 +19,12 @@
 
 #image {
   margin-top: 1vh;
-  margin-left: 10%;
+  margin-left: 10px;
   padding: 20px;
   background-color: #f0803c;
   border-radius: 10%;
   position: absolute;
+
 }
 
 #projects>div:nth-child(n)>#image {
@@ -44,12 +45,13 @@
 
 @media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
   #projects>div {
+    margin-top: 20vh;
     position: relative;
     width: 60%;
     min-width: 200px;
     margin-left: 20%;
-    font-size: 40px;
-    min-height: 5vh;
+    font-size: 30px;
+    min-height: 25vh;
   }
 
   .projectImg {
@@ -61,21 +63,27 @@
 
   #image {
     margin-top: 1vh;
-    margin-left: 45%;
     padding: 20px;
     background-color: #f0803c;
     border-radius: 10%;
     position: absolute;
+    left: 50%;
+    margin-left: 25%;
   }
 
-  #projects>div:nth-child(2n)>#image {
-    top: -30%;
+  h2 {
+    font-size: 60px;
+  }
+
+  #projects>div:nth-child(n)>#image {
+    bottom: 110%;
     right: auto;
     left: auto;
   }
 
   #projects>div:nth-child(2n) {
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
