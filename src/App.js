@@ -4,6 +4,7 @@ import About from './about/about.jsx';
 import Header from './header/header.jsx';
 import Home from './home/home.jsx';
 import Projects from './projects/projects.jsx';
+import Vinmonopolet from './vinmonopolet/vinmonopolet.jsx';
 import {
     BrowserRouter as Router,
     Switch,
@@ -45,6 +46,9 @@ function App() {
                     </Route>
                     <Route path="/contact">
                         <About />
+                    </Route>
+                    <Route path="/polet">
+                        <Vinmonopolet />
                     </Route>
                     <Route path="/">
                         <Header />

@@ -4,6 +4,7 @@ import polet from '../graphics/polet.png';
 import rius from '../graphics/logo3.0.png';
 import photoshop from '../graphics/photoshop.png';
 import vindu from '../graphics/vindu.png';
+import { NavLink } from 'react-router-dom';
 
 export default class projects extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ export default class projects extends Component {
                 {
                     tittel: 'Vinmonopolet',
                     innhold:
-                        'Er du også en av dem som har hatt en hard studietid der man har smagt så å si all øl som Rema1000 har å tilby, men det er litt dyrt å gå for polvarene? Ved hjelp av vinomopolets API er jeg i ferd med å finne løsningen! Så hold ut enn så lenge!',
+                        'Er du også en av dem som har hatt en hard studietid der man har smakt så å si all øl som Rema1000 har å tilby, men det er litt dyrt å gå for polvarene? Ved hjelp av vinomopolets API er jeg i ferd med å finne løsningen! Så hold ut enn så lenge!',
                     bilde: polet,
                 },
             ],
@@ -58,6 +59,9 @@ export default class projects extends Component {
                         </div>
                     );
                 })}
+                <NavLink activeClassName="active" to="/polet">
+                    Vinmonopolet
+                </NavLink>
             </div>
         );
     }
