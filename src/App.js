@@ -54,6 +54,7 @@ function App() {
                         <Header />
                         <Home />
                     </Route>
+                    <Route component={Header} />
                 </Switch>
             </Router>
         </div>

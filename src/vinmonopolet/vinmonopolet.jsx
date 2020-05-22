@@ -12,7 +12,6 @@ export class vinmonopolet extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.searchText);
         try {
             fetch(
                 'https://apis.vinmonopolet.no/products/v0/details-normal?KEY=6a5497e32c02464c854e54ec27996ab1&maxResults=40'
@@ -60,9 +59,7 @@ export class vinmonopolet extends Component {
         return (
             <div>
                 <div id="searchAlco">
-                    <label for="searchBar">
-                        <img src={searchIcon} width="30" alt="SearchIcon" />
-                    </label>
+                    <img src={searchIcon} id="searchIcon" alt="SearchIcon" />
                     <input
                         id="searchBar"
                         type="text"
@@ -71,7 +68,7 @@ export class vinmonopolet extends Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                     />
-                    <p id="info">
+                    <p id="APK_info">
                         *APK: Alkohol per krone. Dette er en måleenhet som
                         forklarer hvor mye alkohol man får for pengene. For å gi
                         et perspektiv til forholdstallet så vil en 6-pack med øl
