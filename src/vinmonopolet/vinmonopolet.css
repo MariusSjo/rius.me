@@ -73,6 +73,14 @@ select {
   margin-top: 0;
 }
 
+#alternatives {
+  top: 0;
+  width: 200px;
+
+
+}
+
+
 @media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
   #searchAlco {
     width: 80%;
