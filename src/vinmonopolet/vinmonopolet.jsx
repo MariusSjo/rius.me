@@ -61,62 +61,45 @@ function Vinmonopolet() {
             <div id="Poloversikt">
                 <h3>Resultater:</h3>
                 {liste.map((drinks) => {
-                    if (drinks.basic.alcoholContent > 0) {
-                        console.log(
-                            drinks.classification.mainProductTypeName.includes(
-                                'vin'
-                            ),
-                            drinks.classification.mainProductTypeId,
-                            alternative,
-                            drinks.classification.mainProductTypeName == 'Øl'
+                    if (
+                        drinks.basic.alcoholContent > 0 &&
+                        (drinks.classification.mainProductTypeId ==
+                            alternative ||
+                            alternative == 0)
+                    ) {
+                        return (
+                            <div
+                                className="enheter"
+                                key={drinks.basic.productId}
+                            >
+                                <div>
+                                    <h4>{drinks.basic.productShortName}</h4>
+                                </div>
+                                <img
+                                    className="picture"
+                                    alt={drinks.basic.productLongName}
+                                    src={
+                                        'https://bilder.vinmonopolet.no/cache/200x200-0/' +
+                                        drinks.basic.productId +
+                                        '-1.jpg'
+                                    }
+                                />
+                                <div>
+                                    <o>Pris:</o> {drinks.prices[0].salesPrice}kr
+                                    <br />
+                                    Prosent: {drinks.basic.alcoholContent}%{' '}
+                                    <br />
+                                    Volum: {drinks.basic.volume} <br />
+                                    APK:{' '}
+                                    {Math.round(
+                                        ((drinks.basic.volume *
+                                            drinks.basic.alcoholContent) /
+                                            drinks.prices[0].salesPrice) *
+                                            1000
+                                    ) / 1000}
+                                </div>
+                            </div>
                         );
-                        if (
-                            drinks.classification.mainProductTypeId ==
-                                alternative ||
-                            alternative == 0
-                        ) {
-                            {
-                                return (
-                                    <div
-                                        className="enheter"
-                                        key={drinks.basic.productId}
-                                    >
-                                        <div>
-                                            <h4>
-                                                {drinks.basic.productShortName}
-                                            </h4>
-                                        </div>
-                                        <img
-                                            className="picture"
-                                            alt={drinks.basic.productLongName}
-                                            src={
-                                                'https://bilder.vinmonopolet.no/cache/200x200-0/' +
-                                                drinks.basic.productId +
-                                                '-1.jpg'
-                                            }
-                                        />
-                                        <div>
-                                            <o>Pris:</o>{' '}
-                                            {drinks.prices[0].salesPrice}kr
-                                            <br />
-                                            Prosent:{' '}
-                                            {drinks.basic.alcoholContent}%{' '}
-                                            <br />
-                                            Volum: {drinks.basic.volume} <br />
-                                            APK:{' '}
-                                            {Math.round(
-                                                ((drinks.basic.volume *
-                                                    drinks.basic
-                                                        .alcoholContent) /
-                                                    drinks.prices[0]
-                                                        .salesPrice) *
-                                                    100
-                                            ) / 100}
-                                        </div>
-                                    </div>
-                                );
-                            }
-                        }
                     }
                 })}
             </div>
