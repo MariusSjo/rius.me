@@ -17,8 +17,8 @@ function Vinmonopolet() {
     function handleChange(liste) {
         try {
             fetch(
-                'https://apis.vinmonopolet.no/products/v0/details-normal?KEY=6a5497e32c02464c854e54ec27996ab1&maxResults=30&productshortnamecontains=' +
-                    searchText
+                'https://apis.vinmonopolet.no/products/v0/details-normal?KEY=6a5497e32c02464c854e54ec27996ab1&maxResults=100&productshortnamecontains=' +
+                    searchText.replace(' ', '_')
             )
                 .then((results) => {
                     return results.json();
