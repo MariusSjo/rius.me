@@ -1,0 +1,121 @@
+#Poloversikt {
+  width: 60%;
+  margin: auto;
+  max-width: 600px;
+  min-width: 400px;
+}
+
+#searchAlco {
+  margin: auto;
+  width: 60%;
+  max-width: 600px;
+  min-width: 400px;
+}
+
+#searchIcon {
+  margin-left: -40px;
+  margin-bottom: -13px;
+  width: 35px;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+.enheter {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  border: 2px solid #456f5f;
+  height: 200px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+.picture {
+  grid-column: 3;
+  grid-row: 1/4;
+  margin: auto;
+}
+
+.enheter>div:first-child {
+  grid-column: 1/3;
+  font-style: bold;
+}
+
+.enhet>div {
+  font-size: 20px;
+  text-align: center;
+  line-height: 90px;
+}
+
+.picture {
+  max-width: 60px;
+  background-color: white;
+}
+
+#APK_info {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0;
+}
+
+#alternatives {
+  top: 0;
+  width: 200px;
+
+
+}
+
+
+@media screen and (min-width:640px) and (-webkit-device-pixel-ratio: 3) {
+  #searchAlco {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  #searchBar {
+    max-width: 800px;
+    font-size: 4em;
+    font-weight: bold;
+    min-height: 150px;
+  }
+
+  #Poloversikt {
+    max-width: 800px;
+    font-size: 2em;
+    width: 80%;
+  }
+
+  .enheter {
+    min-height: 350px;
+  }
+
+  .picture {
+    max-width: 90px;
+  }
+
+  #searchIcon {
+    display: none;
+  }
+
+  #APK_info {
+    margin: 0;
+    font-size: 1.12em;
+  }
+
+
+}
