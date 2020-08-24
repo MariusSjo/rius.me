@@ -26,7 +26,6 @@ function Vinmonopolet() {
         .then((data) => {
           setListe(data);
         });
-      console.log(liste);
     } catch {
       console.log("not connected");
     }
