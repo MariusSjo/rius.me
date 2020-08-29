@@ -35,7 +35,7 @@ function FaceDetection() {
 				const detections = await faceapi
 					.detectAllFaces(
 						video,
-						new faceapi.TinyFaceDetectorOptions()
+						new faceapi.TinyFaceDetectorOptions({ inputSize: 416 })
 					)
 					.withFaceLandmarks()
 					.withFaceExpressions();
@@ -46,8 +46,8 @@ function FaceDetection() {
 				canvas
 					.getContext('2d')
 					.clearRect(0, 0, canvas.width, canvas.height);
-				faceapi.draw.drawFaceLandmarks(canvas, rezizedDetections);
 				faceapi.draw.drawDetections(canvas, rezizedDetections);
+				faceapi.draw.drawFaceExpressions(canvas, rezizedDetections);
 			}, 100);
 		});
 	}
@@ -60,6 +60,7 @@ function FaceDetection() {
 					height='560'
 					autoPlay
 					muted></video>
+				<button type='radio'>hei</button>
 			</div>
 		</div>
 	);
