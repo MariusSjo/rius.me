@@ -48,6 +48,7 @@ function FaceDetection() {
 					.clearRect(0, 0, canvas.width, canvas.height);
 				faceapi.draw.drawDetections(canvas, rezizedDetections);
 				faceapi.draw.drawFaceExpressions(canvas, rezizedDetections);
+				faceapi.draw.drawFaceLandmarks(canvas, rezizedDetections);
 			}, 100);
 		});
 	}
@@ -60,7 +61,6 @@ function FaceDetection() {
 					height='560'
 					autoPlay
 					muted></video>
-				<button type='radio'>hei</button>
 			</div>
 		</div>
 	);

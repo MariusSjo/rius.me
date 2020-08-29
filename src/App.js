@@ -47,10 +47,10 @@ function App() {
 					<Route path='/contact'>
 						<About />
 					</Route>
-					<Route path='/polet'>
+					<Route path='/Vinmonopolet'>
 						<Vinmonopolet />
 					</Route>
-					<Route path='/faceDetection'>
+					<Route path='/Ansiktsgjenkjenning'>
 						<FaceDetection />
 					</Route>
 					<Route path='/'>
