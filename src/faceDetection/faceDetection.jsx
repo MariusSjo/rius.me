@@ -60,7 +60,11 @@ function FaceDetection() {
 					width='720'
 					height='560'
 					autoPlay
-					muted></video>
+					muted
+					alt='Webcammet skal vises her.'>
+					Dette funker desverre ikke på enheten din, vennligst prøv på
+					en PC.
+				</video>
 			</div>
 		</div>
 	);
