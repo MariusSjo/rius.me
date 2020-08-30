@@ -3,6 +3,7 @@ import './faceDetection.css';
 import * as faceapi from 'face-api.js';
 function FaceDetection() {
 	const MODEL_URL = '/models';
+	let video;
 	useEffect(() => {
 		Promise.all([
 			faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
@@ -12,6 +13,10 @@ function FaceDetection() {
 		])
 			.then(startVideo())
 			.then(graphics());
+		return () => {
+			const video = document.getElementById('video');
+			video.srcObject.getTracks()[0].stop();
+		};
 	});
 
 	function startVideo() {
@@ -24,6 +29,7 @@ function FaceDetection() {
 			(err) => console.log(err)
 		);
 	}
+
 	function graphics() {
 		const video = document.getElementById('video');
 		video.addEventListener('play', () => {
