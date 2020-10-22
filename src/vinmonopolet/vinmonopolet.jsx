@@ -92,8 +92,8 @@ function Vinmonopolet() {
 										((drinks.basic.volume *
 											drinks.basic.alcoholContent) /
 											drinks.prices[0].salesPrice) *
-											1000
-									) / 1000}
+											math.pow(1000,2)
+									)}
 								</div>
 							</div>
 						);
