@@ -11,13 +11,14 @@ function Vinmonopolet() {
 		{ name: 'Vin', value: 1, checked: '' },
 		{ name: 'Brennevin', value: 3, checked: '' },
 	];
+	const API_KEY = process.env.REACT_APP_API_KEY;
 
 	useEffect(handleChange, [searchText]);
 
-	function handleChange(liste) {
+	function handleChange() {
 		try {
 			fetch(
-				'https://apis.vinmonopolet.no/products/v0/details-normal?KEY=6a5497e32c02464c854e54ec27996ab1&maxResults=100&productshortnamecontains=' +
+				'https://apis.vinmonopolet.no/products/v0/details-normal?KEY='+API_KEY+'&maxResults=100&productshortnamecontains=' +
 					searchText.replace(' ', '_')
 			)
 				.then((results) => {
@@ -50,7 +51,7 @@ function Vinmonopolet() {
 					<select onChange={(e) => setAlternative(e.target.value)}>
 						{alternatives.map((alt) => {
 							return (
-								<option value={alt.value}>{alt.name}</option>
+								<option key={alt.value} value={alt.value}>{alt.name}</option>
 							);
 						})}
 					</select>
@@ -69,7 +70,7 @@ function Vinmonopolet() {
 							<div
 								className='enheter'
 								key={drinks.basic.productId}>
-								<div>
+								<div key={drinks.basic.productShortName}>
 									<h4>{drinks.basic.productShortName}</h4>
 								</div>
 								<img
@@ -82,7 +83,7 @@ function Vinmonopolet() {
 									}
 								/>
 								<div>
-									<o>Pris:</o> {drinks.prices[0].salesPrice}kr
+									Pris: {drinks.prices[0].salesPrice}kr
 									<br />
 									Prosent: {drinks.basic.alcoholContent}%{' '}
 									<br />
@@ -92,13 +93,13 @@ function Vinmonopolet() {
 										((drinks.basic.volume *
 											drinks.basic.alcoholContent) /
 											drinks.prices[0].salesPrice) *
-											math.pow(1000,2)
+											Math.pow(1000,2)
 									)}
 								</div>
 							</div>
 						);
 					}
-					return <div></div>;
+					else return null
 				})}
 			</div>
 		</div>

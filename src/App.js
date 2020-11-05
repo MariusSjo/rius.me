@@ -17,7 +17,7 @@ function App() {
 	return (
 		<div>
 			<Router>
-				<ul class='navbar'>
+				<ul className='navbar'>
 					<div>
 						<li>
 							<NavLink activeClassName='active' to='/ '>
