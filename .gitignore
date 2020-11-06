@@ -104,8 +104,8 @@ dist
 .tern-port
 
 # BuildFila
-/www
-/build
+www/*
+build/*
 
 # api keys
 .env    
