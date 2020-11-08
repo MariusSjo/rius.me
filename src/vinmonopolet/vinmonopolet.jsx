@@ -16,20 +16,19 @@ function Vinmonopolet() {
 
 	function handleChange() {
 		if (searchText.length > 0) {
-			try {
-				fetch(
-					'https://rius.herokuapp.com/beverages/search/' +
-						searchText.replace(' ', '_'),
-				)
-					.then((results) => {
-						return results.json();
-					})
-					.then((data) => {
-						setList(data);
-					});
-			} catch {
-				console.error('not connected');
-			}
+			fetch(
+				'https://rius.herokuapp.com/beverages/search/' +
+					searchText.replace(' ', '_'),
+			)
+				.then((results) => {
+					return results.json();
+				})
+				.then((data) => {
+					setList(data);
+				})
+				.catch((err) => {
+					console.error('error:', err);
+				});
 		} else {
 			setList([]);
 		}
@@ -81,7 +80,7 @@ function Vinmonopolet() {
 								</div>
 								<img
 									className='picture'
-									alt={drink.LongName}
+									alt={drink.longName}
 									src={
 										'https://bilder.vinmonopolet.no/cache/200x200-0/' +
 										drink.productId +
@@ -105,7 +104,7 @@ function Vinmonopolet() {
 											'https://www.vinmonopolet.no/Land/' +
 											drink.country +
 											'/' +
-											drink.LongName.replace(' ', '-') +
+											drink.longName.replace(' ', '-') +
 											'/p/' +
 											drink.productId
 										}
