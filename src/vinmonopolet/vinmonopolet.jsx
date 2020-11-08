@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './vinmonopolet.css';
 import searchIcon from '../graphics/search_icon.png';
 function Vinmonopolet() {
-	const [liste, setListe] = useState([]);
+	const [list, setList] = useState([]);
 	const [searchText, setSearchText] = useState('');
 	const [alternative, setAlternative] = useState(0);
 	const alternatives = [
@@ -11,24 +11,27 @@ function Vinmonopolet() {
 		{ name: 'Vin', value: 1, checked: '' },
 		{ name: 'Brennevin', value: 3, checked: '' },
 	];
-	const API_KEY = process.env.REACT_APP_API_KEY;
 
 	useEffect(handleChange, [searchText]);
 
 	function handleChange() {
-		try {
-			fetch(
-				'https://apis.vinmonopolet.no/products/v0/details-normal?KEY='+API_KEY+'&maxResults=100&productshortnamecontains=' +
-					searchText.replace(' ', '_')
-			)
-				.then((results) => {
-					return results.json();
-				})
-				.then((data) => {
-					setListe(data);
-				});
-		} catch {
-			console.log('not connected');
+		if (searchText.length > 0) {
+			try {
+				fetch(
+					'https://rius.herokuapp.com/beverages/search/' +
+						searchText.replace(' ', '_'),
+				)
+					.then((results) => {
+						return results.json();
+					})
+					.then((data) => {
+						setList(data);
+					});
+			} catch {
+				console.error('not connected');
+			}
+		} else {
+			setList([]);
 		}
 	}
 	return (
@@ -39,7 +42,11 @@ function Vinmonopolet() {
 					id='searchBar'
 					type='text'
 					placeholder='Søk etter polvarer her!'
-					onChange={(e) => setSearchText(e.target.value)}
+					onChange={(e) =>
+						e.target.value.length === 0
+							? setSearchText('NULL')
+							: setSearchText(e.target.value)
+					}
 				/>
 				<p id='APK_info'>
 					*APK: Alkohol per krone. Dette er en måleenhet som forklarer
@@ -51,7 +58,9 @@ function Vinmonopolet() {
 					<select onChange={(e) => setAlternative(e.target.value)}>
 						{alternatives.map((alt) => {
 							return (
-								<option key={alt.value} value={alt.value}>{alt.name}</option>
+								<option key={alt.value} value={alt.value}>
+									{alt.name}
+								</option>
 							);
 						})}
 					</select>
@@ -59,47 +68,55 @@ function Vinmonopolet() {
 			</div>
 			<div id='Poloversikt'>
 				<h3>Resultater:</h3>
-				{liste.map((drinks) => {
+				{list.map((drink) => {
 					if (
-						drinks.basic.alcoholContent > 0 &&
-						(drinks.classification.mainProductTypeId ===
-							alternative ||
+						drink.percent > 0 &&
+						(drink.classification === alternative ||
 							alternative < 1)
 					) {
 						return (
-							<div
-								className='enheter'
-								key={drinks.basic.productId}>
-								<div key={drinks.basic.productShortName}>
-									<h4>{drinks.basic.productShortName}</h4>
+							<div className='enheter' key={drink.productId}>
+								<div key={drink.name}>
+									<h4>{drink.name}</h4>
 								</div>
 								<img
 									className='picture'
-									alt={drinks.basic.productLongName}
+									alt={drink.LongName}
 									src={
 										'https://bilder.vinmonopolet.no/cache/200x200-0/' +
-										drinks.basic.productId +
+										drink.productId +
 										'-1.jpg'
 									}
 								/>
 								<div>
-									Pris: {drinks.prices[0].salesPrice}kr
+									Pris: {drink.prices}kr
 									<br />
-									Prosent: {drinks.basic.alcoholContent}%{' '}
-									<br />
-									Volum: {drinks.basic.volume} <br />
+									Prosent: {drink.percent}% <br />
+									Volum: {drink.volume} <br />
 									APK:{' '}
-									{Math.round(
-										((drinks.basic.volume *
-											drinks.basic.alcoholContent) /
-											drinks.prices[0].salesPrice) *
-											Math.pow(1000,2)
-									)}
+									{(
+										(drink.volume * drink.percent) /
+										drink.prices
+									).toFixed(4)}
+									<br />
+									<a
+										className='drinkLink'
+										href={
+											'https://www.vinmonopolet.no/Land/' +
+											drink.country +
+											'/' +
+											drink.LongName.replace(' ', '-') +
+											'/p/' +
+											drink.productId
+										}
+										target='_blank'
+										rel='noopener noreferrer'>
+										Link
+									</a>
 								</div>
 							</div>
 						);
-					}
-					else return null
+					} else return null;
 				})}
 			</div>
 		</div>
