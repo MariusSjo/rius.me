@@ -20,23 +20,25 @@ function App() {
 				<ul className='navbar'>
 					<div>
 						<li>
-							<NavLink activeClassName='active' to='/ '>
-								Hjem
+							<NavLink to='/ ' exact activeClassName='active'>
+								hjem
 							</NavLink>
 						</li>
 						<li id='divider'> | </li>
 						<li>
 							<NavLink
+								exact
 								activeClassName='active'
 								to='/projects'
 								id='projects'>
-								Prosjekter
+								prosjekter
 							</NavLink>
 						</li>
 					</div>
+
 					<li>
 						<NavLink activeClassName='active' to='/contact'>
-							Kontakt
+							kontakt
 						</NavLink>
 					</li>
 				</ul>
