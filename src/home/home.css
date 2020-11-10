@@ -24,7 +24,8 @@ h2 {
 	margin: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	margin-bottom: 20px;
-	transition: 0.5s;
+	transition: 0.3s;
+	background-color: #ece2dc;
 }
 
 .col-md-7 img {
@@ -43,7 +44,7 @@ h2 {
 }
 
 .col-md-7:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -152,6 +153,7 @@ h2 {
 		width: 50vw;
 		min-width: 600px;
 		margin: auto;
+		margin-bottom: 5vh;
 	}
 	.col-md-7 img {
 		margin: auto;
