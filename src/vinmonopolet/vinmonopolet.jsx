@@ -54,15 +54,22 @@ function Vinmonopolet() {
 					200 ha 0,0705 APK.
 				</p>
 				<div id='alternatives'>
-					<select onChange={(e) => setAlternative(e.target.value)}>
-						{alternatives.map((alt) => {
-							return (
-								<option key={alt.value} value={alt.value}>
-									{alt.name}
-								</option>
-							);
-						})}
-					</select>
+					<div>
+						<p>Filtrer på</p>
+						<label>
+							<input type='checkbox' name='beer'></input> øl
+						</label>
+						<select
+							onChange={(e) => setAlternative(e.target.value)}>
+							{alternatives.map((alt) => {
+								return (
+									<option key={alt.value} value={alt.value}>
+										{alt.name}
+									</option>
+								);
+							})}
+						</select>
+					</div>
 				</div>
 			</div>
 			<div id='Poloversikt'>

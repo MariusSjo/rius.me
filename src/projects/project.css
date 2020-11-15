@@ -1,16 +1,3 @@
-#projects {
-	margin-top: 5vh;
-}
-
-#projects > div {
-	position: relative;
-	margin-left: 40%;
-	margin-bottom: 20vh;
-	width: 36%;
-	min-width: 200px;
-	min-height: 35vh;
-}
-
 .projectImg {
 	height: 150px;
 	width: 150px;
@@ -19,67 +6,28 @@
 
 #image {
 	margin-top: 1vh;
-	margin-left: 10px;
-	padding: 20px;
-	background-color: #f0803c;
+	padding: 5px;
 	border-radius: 10%;
-	position: absolute;
+	box-shadow: none;
+	max-width: 210px;
+	margin: auto;
 }
 
-#projects > div:nth-child(n) > #image {
-	left: auto;
-	right: 110%;
+#link_project {
+	color: black;
 }
 
-#projects > div:nth-child(2n) > #image {
-	left: 110%;
-	right: auto;
+.col-md-projects {
+	padding-top: 5vh;
+	background-color: #82aa9a;
+	border-radius: 10px;
 }
 
-#projects > div:nth-child(2n) {
-	margin-left: 22%;
-	left: auto;
+.col-md-projects:first-child {
+	padding-top: 5vh;
 }
 
-@media screen and (min-width: 640px) and (-webkit-device-pixel-ratio: 3) {
-	#projects > div {
-		margin-top: 15vh;
-		position: relative;
-		width: 60%;
-		min-width: 200px;
-		margin-left: 20%;
-		font-size: 30px;
-		min-height: 620px;
-	}
-
-	#projects > div:first-child {
-		margin-top: 25vh;
-	}
-
-	.projectImg {
-		height: 250px;
-		width: 250px;
-		position: relative;
-	}
-
-	#image {
-		margin-top: 1vh;
-		padding: 20px;
-		background-color: #f0803c;
-		border-radius: 10%;
-		position: absolute;
-		left: 50%;
-		margin-left: 25%;
-	}
-
-	#projects > div:nth-child(n) > #image {
-		bottom: 110%;
-		right: auto;
-		left: auto;
-	}
-
-	#projects > div:nth-child(2n) {
-		margin-left: auto;
-		margin-right: auto;
-	}
+#project {
+	background-color: #e1e1e1;
+	padding-top: 50px;
 }
