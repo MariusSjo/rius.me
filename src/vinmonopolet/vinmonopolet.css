@@ -12,10 +12,28 @@
 	min-width: 400px;
 }
 
+#searchAlco * {
+	margin-bottom: 0px;
+}
+
 #searchIcon {
 	margin-left: -40px;
 	margin-bottom: -13px;
 	width: 35px;
+}
+
+.filter {
+	padding: 4px;
+	font-size: 15px;
+}
+
+#filters {
+	display: flex;
+}
+
+#filters > p {
+	display: flex;
+	padding-right: 20px;
 }
 
 input[type='text'],

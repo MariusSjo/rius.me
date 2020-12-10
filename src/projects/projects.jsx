@@ -50,10 +50,11 @@ export default function projects() {
 			key: 5,
 		},
 	];
-
+	let odd = true;
 	return (
 		<div id='project'>
 			{projects.map((project) => {
+				odd = !odd;
 				return (
 					<div key={project.key} className='col-md-7 col-md-projects'>
 						<div>

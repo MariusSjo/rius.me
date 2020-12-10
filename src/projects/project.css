@@ -23,6 +23,11 @@
 	border-radius: 10px;
 }
 
+.col-md-projects:nth-child(2n) {
+	background-color: #e6d5cb;
+	border-radius: 10px;
+}
+
 .col-md-projects:first-child {
 	padding-top: 5vh;
 }

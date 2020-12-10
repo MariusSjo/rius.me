@@ -5,20 +5,37 @@ function Vinmonopolet() {
 	const [list, setList] = useState([]);
 	const [searchText, setSearchText] = useState('');
 	const [alternative, setAlternative] = useState(0);
+	const [order, setOrder] = useState('AKP');
+	const [acs, setAcs] = useState('-1');
+	const [available, setAvailable] = useState('1');
 	const alternatives = [
-		{ name: 'Alle', value: 0, checked: 'checked' },
-		{ name: 'Øl', value: 5, checked: '' },
-		{ name: 'Vin', value: 1, checked: '' },
-		{ name: 'Brennevin', value: 3, checked: '' },
+		{ name: 'Alle', value: 0 },
+		{ name: 'Øl', value: 5 },
+		{ name: 'Vin', value: 1 },
+		{ name: 'Brennevin', value: 3 },
+	];
+	const sortAlternatives = [
+		{ name: 'AKP', value: 'AKP' },
+		{ name: 'Pris', value: 'prices' },
+		{ name: 'Volum', value: 'volume' },
+		{ name: 'Prosent', value: 'percent' },
 	];
 
-	useEffect(handleChange, [searchText]);
-
+	useEffect(handleChange, [searchText, alternative, acs, available, order]);
+	/* 	/beverages/search/fre/orderBy/APK/-1/filter/0/isAvailable/1*/
 	function handleChange() {
 		if (searchText.length > 0) {
 			fetch(
 				'https://rius.herokuapp.com/beverages/search/' +
-					searchText.replace(' ', '_'),
+					searchText.replace(' ', '_') +
+					'/orderBy/' +
+					order +
+					'/' +
+					acs +
+					'/filter/' +
+					alternative +
+					'/isAvailable/' +
+					available,
 			)
 				.then((results) => {
 					return results.json();
@@ -33,6 +50,7 @@ function Vinmonopolet() {
 			setList([]);
 		}
 	}
+
 	return (
 		<div>
 			<div id='searchAlco'>
@@ -51,23 +69,61 @@ function Vinmonopolet() {
 					*APK: Alkohol per krone. Dette er en måleenhet som forklarer
 					hvor mye alkohol man får for pengene. For å gi et perspektiv
 					til forholdstallet så vil en 6-pack med øl på 4,7% til kr
-					200 ha 0,0705 APK.
+					200 ha 7,05 APK.
 				</p>
-				<div id='alternatives'>
-					<div>
-						<p>Filtrer på</p>
-						<label>
-							<input type='checkbox' name='beer'></input> øl
-						</label>
+				<p>
+					<b>Filtrering og søk</b>
+				</p>
+				<hr />
+				<div>
+					<div id='filters'>
+						<p>Type:</p>
 						<select
+							name='filtervalue'
+							className='filter'
 							onChange={(e) => setAlternative(e.target.value)}>
 							{alternatives.map((alt) => {
 								return (
-									<option key={alt.value} value={alt.value}>
+									<option value={alt.value}>
 										{alt.name}
 									</option>
 								);
 							})}
+						</select>
+					</div>
+					<div id='filters'>
+						<p>Sortering:</p>
+						<select
+							name='filtervalue'
+							className='filter'
+							onChange={(e) => setOrder(e.target.value)}>
+							{sortAlternatives.map((alt) => {
+								return (
+									<option value={alt.value}>
+										{alt.name}
+									</option>
+								);
+							})}
+						</select>
+					</div>
+					<div id='filters'>
+						<p>Rekkefølge:</p>
+						<select
+							name='filtervalue'
+							className='filter'
+							onChange={(e) => setAcs(e.target.value)}>
+							<option value='-1'>Synkende</option>
+							<option value='1'>Stigende</option>
+						</select>
+					</div>
+					<div id='filters'>
+						<p>Tilgjengelig:</p>
+						<select
+							name='filtervalue'
+							className='filter'
+							onChange={(e) => setAvailable(e.target.value)}>
+							<option value='0'>Alle resultater</option>
+							<option value='1'>Kun tilgjengelige</option>
 						</select>
 					</div>
 				</div>
@@ -99,11 +155,7 @@ function Vinmonopolet() {
 									<br />
 									Prosent: {drink.percent}% <br />
 									Volum: {drink.volume} <br />
-									APK:{' '}
-									{(
-										(drink.volume * drink.percent) /
-										drink.prices
-									).toFixed(4)}
+									APK:{Number(drink.APK).toFixed(4) * 100}
 									<br />
 									<a
 										className='drinkLink'
