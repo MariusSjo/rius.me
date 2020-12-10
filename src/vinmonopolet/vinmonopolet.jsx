@@ -155,7 +155,7 @@ function Vinmonopolet() {
 									<br />
 									Prosent: {drink.percent}% <br />
 									Volum: {drink.volume} <br />
-									APK:{Number(drink.APK).toFixed(4) * 100}
+									APK: {(Number(drink.APK) * 100).toFixed(2)}
 									<br />
 									<a
 										className='drinkLink'
