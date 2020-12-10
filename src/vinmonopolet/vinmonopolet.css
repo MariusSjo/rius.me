@@ -12,10 +12,28 @@
 	min-width: 400px;
 }
 
+#searchAlco * {
+	margin-bottom: 0px;
+}
+
 #searchIcon {
 	margin-left: -40px;
 	margin-bottom: -13px;
 	width: 35px;
+}
+
+.filter {
+	padding: 4px;
+	font-size: 15px;
+}
+
+#filters {
+	display: flex;
+}
+
+#filters > p {
+	display: flex;
+	padding-right: 20px;
 }
 
 input[type='text'],
@@ -74,8 +92,13 @@ select {
 }
 
 #alternatives {
-	top: 0;
+	position: absolute;
+	top: 25%;
+	left: 3%;
 	width: 200px;
+	box-shadow: inset 0 0 10px #000000;
+	border-radius: 10px;
+	padding: 20px;
 }
 
 @media screen and (min-width: 640px) and (-webkit-device-pixel-ratio: 3) {

@@ -50,26 +50,30 @@ export default function projects() {
 			key: 5,
 		},
 	];
-
+	let odd = true;
 	return (
-		<div id='projects'>
+		<div id='project'>
 			{projects.map((project) => {
+				odd = !odd;
 				return (
-					<div key={project.key}>
-						<div id='image'>
-							<img
-								className='projectImg'
-								src={project.bilde}
-								alt={project.tittel}></img>
+					<div key={project.key} className='col-md-7 col-md-projects'>
+						<div>
+							<h2>
+								<NavLink id='link_project' to={project.link}>
+									{project.link}
+								</NavLink>
+								{project.tittel}
+							</h2>
+							<p>{project.innhold}</p>
 						</div>
-						<h2>
-							<NavLink activeClassName='active' to={project.link}>
-								{project.link}
+						<div id='image'>
+							<NavLink id='link_project' to={project.link}>
+								<img
+									src={project.bilde}
+									alt={project.tittel}
+									id='image'></img>
 							</NavLink>
-							{project.tittel}
-						</h2>
-						<hr />
-						<p>{project.innhold}</p>
+						</div>
 					</div>
 				);
 			})}
