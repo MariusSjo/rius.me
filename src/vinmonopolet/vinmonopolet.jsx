@@ -5,7 +5,7 @@ function Vinmonopolet() {
 	const [list, setList] = useState([]);
 	const [searchText, setSearchText] = useState('');
 	const [alternative, setAlternative] = useState(0);
-	const [order, setOrder] = useState('AKP');
+	const [order, setOrder] = useState('APK');
 	const [acs, setAcs] = useState('-1');
 	const [available, setAvailable] = useState('1');
 	const alternatives = [
@@ -15,7 +15,7 @@ function Vinmonopolet() {
 		{ name: 'Brennevin', value: 3 },
 	];
 	const sortAlternatives = [
-		{ name: 'AKP', value: 'AKP' },
+		{ name: 'APK', value: 'APK' },
 		{ name: 'Pris', value: 'prices' },
 		{ name: 'Volum', value: 'volume' },
 		{ name: 'Prosent', value: 'percent' },
@@ -47,8 +47,33 @@ function Vinmonopolet() {
 					console.error('error:', err);
 				});
 		} else {
-			setList([]);
+			handleEmpty();
 		}
+	}
+
+	/*     http://localhost:5001/beverages/orderBy/APK/-1/filter/0/isAvailable/1 HTTP/1.1 */
+
+	function handleEmpty() {
+		fetch(
+			'https://rius.herokuapp.com/beverages/' +
+				'orderBy/' +
+				order +
+				'/' +
+				acs +
+				'/filter/' +
+				alternative +
+				'/isAvailable/' +
+				available,
+		)
+			.then((results) => {
+				return results.json();
+			})
+			.then((data) => {
+				setList(data);
+			})
+			.catch((err) => {
+				console.error('error:', err);
+			});
 	}
 
 	return (
@@ -61,7 +86,7 @@ function Vinmonopolet() {
 					placeholder='Søk etter polvarer her!'
 					onChange={(e) =>
 						e.target.value.length === 0
-							? setSearchText('NULL')
+							? handleEmpty()
 							: setSearchText(e.target.value)
 					}
 				/>
@@ -131,50 +156,44 @@ function Vinmonopolet() {
 			<div id='Poloversikt'>
 				<h3>Resultater:</h3>
 				{list.map((drink) => {
-					if (
-						drink.percent > 0 &&
-						(drink.classification === alternative ||
-							alternative < 1)
-					) {
-						return (
-							<div className='enheter' key={drink.productId}>
-								<div key={drink.name}>
-									<h4>{drink.name}</h4>
-								</div>
-								<img
-									className='picture'
-									alt={drink.longName}
-									src={
-										'https://bilder.vinmonopolet.no/cache/200x200-0/' +
-										drink.productId +
-										'-1.jpg'
-									}
-								/>
-								<div>
-									Pris: {drink.prices}kr
-									<br />
-									Prosent: {drink.percent}% <br />
-									Volum: {drink.volume} <br />
-									APK: {(Number(drink.APK) * 100).toFixed(2)}
-									<br />
-									<a
-										className='drinkLink'
-										href={
-											'https://www.vinmonopolet.no/Land/' +
-											drink.country +
-											'/' +
-											drink.longName.replace(' ', '-') +
-											'/p/' +
-											drink.productId
-										}
-										target='_blank'
-										rel='noopener noreferrer'>
-										Link
-									</a>
-								</div>
+					return (
+						<div className='enheter' key={drink.productId}>
+							<div key={drink.name}>
+								<h4>{drink.name}</h4>
 							</div>
-						);
-					} else return null;
+							<img
+								className='picture'
+								alt={drink.longName}
+								src={
+									'https://bilder.vinmonopolet.no/cache/200x200-0/' +
+									drink.productId +
+									'-1.jpg'
+								}
+							/>
+							<div>
+								Pris: {drink.prices}kr
+								<br />
+								Prosent: {drink.percent}% <br />
+								Volum: {drink.volume} <br />
+								APK: {(Number(drink.APK) * 100).toFixed(2)}
+								<br />
+								<a
+									className='drinkLink'
+									href={
+										'https://www.vinmonopolet.no/Land/' +
+										drink.country +
+										'/' +
+										drink.longName.replace(' ', '-') +
+										'/p/' +
+										drink.productId
+									}
+									target='_blank'
+									rel='noopener noreferrer'>
+									Link
+								</a>
+							</div>
+						</div>
+					);
 				})}
 			</div>
 		</div>
