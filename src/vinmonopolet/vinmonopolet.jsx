@@ -7,7 +7,7 @@ function Vinmonopolet() {
 	const [alternative, setAlternative] = useState(0);
 	const [order, setOrder] = useState('APK');
 	const [acs, setAcs] = useState('-1');
-	const [available, setAvailable] = useState('1');
+	const [available, setAvailable] = useState('0');
 	const alternatives = [
 		{ name: 'Alle', value: 0 },
 		{ name: 'Øl', value: 5 },
