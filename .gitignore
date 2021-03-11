@@ -1,3 +1,4 @@
-www
+**/build
+**/www
 node_modules
 .env

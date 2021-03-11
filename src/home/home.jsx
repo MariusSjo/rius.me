@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './home.css';
 import ferie from '../graphics/ferie.png';
-import paaTur from '../graphics/paaTur.jpg';
+import glad from '../graphics/glad.jpg';
 import portrett from '../graphics/skitur.jpg';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { BrowserRouter as NavLink } from 'react-router-dom';
 
 export class home extends Component {
 	render() {
@@ -35,7 +35,7 @@ export class home extends Component {
 					<img src={portrett} alt='Portrett' />
 				</div>
 
-				<div class='col-md-7'>
+				<div className='col-md-7'>
 					<div className='text-home'>
 						<h2>Sjekk gjerne ut prosjektene mine! </h2>
 						<p>
@@ -46,7 +46,7 @@ export class home extends Component {
 						</p>
 					</div>
 					<div>
-						<img src={paaTur} alt='Portrett' id='portrett' />
+						<img src={glad} alt='Portrett' id='portrett' />
 					</div>
 				</div>
 			</div>

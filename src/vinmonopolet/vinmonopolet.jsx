@@ -109,7 +109,7 @@ function Vinmonopolet() {
 							onChange={(e) => setAlternative(e.target.value)}>
 							{alternatives.map((alt) => {
 								return (
-									<option value={alt.value}>
+									<option value={alt.value} key={alt.value}>
 										{alt.name}
 									</option>
 								);
@@ -124,7 +124,7 @@ function Vinmonopolet() {
 							onChange={(e) => setOrder(e.target.value)}>
 							{sortAlternatives.map((alt) => {
 								return (
-									<option value={alt.value}>
+									<option value={alt.value} key={alt.value}>
 										{alt.name}
 									</option>
 								);

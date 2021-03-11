@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './project.css';
 import polet from '../graphics/polet.png';
 import rius from '../graphics/logo3.0.png';
@@ -20,7 +20,7 @@ export default function projects() {
 		{
 			tittel: '',
 			innhold:
-				'Jeg synes kunstig intligens er utrolig fasinerende. På denne siden kan du bruke ditt egent webcam på å finne ut blant annet ditt eget humør. Her har jeg benyttet meg av et allerede eksisterende API.',
+				'Jeg synes kunstig intelligens er utrolig fasinerende. På denne siden kan du bruke ditt egent webcam på å finne ut blant annet ditt eget humør. Her har jeg benyttet meg av et allerede eksisterende API.',
 			bilde: ansikt,
 			link: 'Ansiktsgjenkjenning',
 			key: 2,
